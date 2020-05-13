@@ -7,7 +7,7 @@
 > ggnetplot <- function(Net=Bali) {Net <- ggnetwork(Net,layout="kamadakawai")
 + ggplot(Net,aes(x,y,xend=xend,yend=yend))+ geom_edges(color="grey40")+
 + geom_nodes(alpha=0.6,size=5)+
-+ geom_nodetext(aes(label=vertex.names),color="blue",size=3)+
++ geom_nodetext(aes(label=vertex.names),color="blue")+
 + theme_blank()
 + }
 > ggnetplot()
