@@ -4,9 +4,6 @@
 > library(sna)
 > library(UserNetR)
 > summary(Bali,print.adj=FALSE)
-> set.seed(605)
-> gplot(Bali, usearrows = FALSE, vertex.col = role.col, edge.col = "grey40", mode="kamadakawai")
-> title("Interactions among the 17 members\n of the 2002 Bali terrorist network")
 > library(RColorBrewer)
 > my.pal <- brewer.pal(length(unique(Bali%v%"role")),"Set2")
 > role.col <- my.pal[as.factor(Bali%v%"role")]
