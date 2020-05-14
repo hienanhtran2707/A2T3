@@ -11,3 +11,13 @@
 > gplot(Bali, usearrows = FALSE, vertex.col = role.col, edge.col = "grey40", mode="kamadakawai")
 > legend("topright", legend=c("Bomb Maker", "Command", "Ops Asst", "Suicide Bomber", "Team Lima"), col = my.pal, pch = 19, pt.cex=2)
 > title("Interactions among the 17 members\n of the 2002 Bali terrorist network")
+
+> library(ggplot2)
+> library(statnet)
+> library(igraph)
+> rolelab <- get.vertex.attribute(Bali,"role")
+> class(rolelab)
+> op <- par(mar=c(0,0,0,0))
+> plot(Bali,usearrows=FALSE,vertex.cex=1.5,label=rolelab,
+displaylabels=T,vertex.col="role")
+> par(op)
